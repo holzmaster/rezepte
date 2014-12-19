@@ -1,0 +1,43 @@
+Seite
+=====
+
+Font-Farbe:
+	#F2F5F4
+Linkfarbe:
+	#75C0C7
+
+Hintergrundfarbe:
+	#161618
+
+Hintergrundfarbe Kommentare:
+	#2A2E31
+
+Titelzeile:
+	#040405
+
+Status
+======
+
+Punkt:
+	●
+
+Farben:
+
+	Gebannt
+		#444444
+	FTB
+		#6C432B
+	Neuschwuchtel
+		#E108E9
+	User
+		#FFFFFF
+	Altschwuchtel
+		#5BB91C
+	Moderator
+		#008FFF
+	Admin
+		#FF9900
+	Wichtler
+		#1CB992
+	Legende
+		#1CB992

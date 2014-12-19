@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.pdf
+*.html
+*.epub
+*.gz
+*.toc
+*.out
+*.dvi
+!/Release/*.pdf
+!/Release/*.html
+!/Release/*.epub

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+linkPrefix='http://pr0gramm.com/new'
+
+while read -r line; do
+	qrencode -o Heft/Rezepte/qr/$line.png "$linkPrefix/$line"
+done < _meta/posts.txt

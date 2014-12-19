@@ -1,0 +1,161 @@
+% Status
+\definecolor{gebannt}{HTML}{444444}
+\definecolor{ftb}{HTML}{6C432B}
+\definecolor{neuschwuchtel}{HTML}{E108E9}
+\definecolor{user}{HTML}{FFFFFF}
+\definecolor{altschwuchtel}{HTML}{5BB91C}
+\definecolor{moderator}{HTML}{008FFF}
+\definecolor{admin}{HTML}{FF9900}
+\definecolor{wichtler}{HTML}{1CB992}
+\definecolor{legende}{HTML}{1CB992}
+
+% Webseite
+\definecolor{proMainBg}{HTML}{161618}
+\definecolor{proCommentsBg}{HTML}{2A2E31}
+\definecolor{proTitleBg}{HTML}{040405}
+
+% Fonts
+\definecolor{proHref}{HTML}{75C0C7}
+\definecolor{proDefaultFont}{HTML}{F2F5F4}
+\definecolor{proStats}{HTML}{888888}
+
+% Dot
+\newcommand{\prostatus}{\ding{108}}
+
+% Schwierigkeiten
+\newcommand{\diffgebannt}{\textcolor{gebannt}{\prostatus}}
+\newcommand{\diffftb}{\textcolor{ftb}{\prostatus\prostatus}}
+\newcommand{\diffneuschwuchtel}{\textcolor{neuschwuchtel}{\prostatus\prostatus\prostatus}}
+\newcommand{\diffuser}{\textcolor{user}{\prostatus\prostatus\prostatus\prostatus}}
+\newcommand{\diffwichtler}{\textcolor{wichtler}{\prostatus\prostatus\prostatus\prostatus\prostatus}}
+\newcommand{\diffaltschwuchtel}{\textcolor{altschwuchtel}{\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus}}
+\newcommand{\diffmoderator}{\textcolor{moderator}{\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus}}
+\newcommand{\diffadmin}{\textcolor{admin}{\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus}}
+\newcommand{\difflegende}{\textcolor{legende}{\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus\prostatus}}
+
+% Stuff
+
+\newcommand{\propostqrinline}[1]{
+	\includegraphics[width=20mm]{Rezepte/qr/#1.png}
+}
+
+\newcommand{\propostqr}[1]{
+	\begin{wrapfigure}{r}{10mm}
+		\begin{center}
+			\propostqrinline{#1}
+		\end{center}
+	\end{wrapfigure}
+}
+
+\newcommand{\prorezeptheader}[4]{
+	\section{#1}
+	\label{sec:#1}
+
+	\kern-1em
+
+	\begin{minipage}[t]{0.5\linewidth}
+		\flushleft
+		von \href{http://pr0gramm.com/new/#3}{#2}
+		% Von \href{http://pr0gramm.com/new/459660}{TankOne}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\linewidth}
+		\flushright
+		#4
+	\end{minipage}
+}
+
+\newcommand{\prorezeptzubereitung}[1]{
+	\subsection{Zubereitung}
+	\begin{enumerate}
+		#1
+	\end{enumerate}
+}
+
+\newcommand{\prorezeptzutaten}[1]{
+	\noindent\begin{minipage}[t]{0.6\linewidth}
+		\flushleft
+		% {\large \textbf{Zutaten}}
+		\subsection{Zutaten}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			#1
+		\end{itemize}
+	\end{minipage}
+}
+\newcommand{\prorezeptequipment}[1]{
+	\noindent\begin{minipage}[t]{0.4\linewidth}
+
+
+%\begin{center}%
+%	\begin{wrapfigure}{r}{10mm}
+%		\begin{center}
+%			\includegraphics[width=20mm]{Rezepte/qr/#2.png}
+%		\end{center}
+%	\end{wrapfigure}
+%\end{center}
+
+		\flushleft
+		\subsection{Equipment}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			#1
+		\end{itemize}
+	%	\ifthenelse{
+	%		\equal{#2}{}
+	%	}{}{
+	%	}
+	\end{minipage}
+}
+
+\newcommand{\promisctext}[1]{
+	\noindent #1
+}
+
+\newcommand{\prorezeptmenge}[2]{
+	\ifthenelse{
+		\equal{#2}{}
+	}{
+		\noindent Für #1 Personen.
+	}{
+		\noindent Für #1 Personen oder #2 pr0grammer.
+	}
+}
+
+\newcommand{\produration}[1]{
+	\texttt{#1}
+}
+
+\newcommand{\proimportant}[1]{
+	\textbf{#1}
+}
+
+\newcommand{\prorezepttipps}[1]{
+	{
+		\flushleft
+		\subsection{Tipps}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			#1
+		\end{itemize}
+	}
+}
+
+\newcommand{\prooc}[1]{
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Rezepte/Images/OC/#1.jpg}
+	\end{center}
+}
+
+\newcommand{\proocsmall}[1]{
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{Rezepte/Images/OC/#1.jpg}
+	\end{center}
+}
+\newcommand{\proocsmallside}[2]{
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\textwidth]{Rezepte/Images/OC/#1.jpg}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\linewidth}
+		\includegraphics[width=\textwidth]{Rezepte/Images/OC/#2.jpg}
+	\end{minipage}
+}
